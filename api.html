@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="api.css">
+</head>
+
+<body>
+    <div>
+        <b>Method Type</b><br>
+        <input type="radio" id="GET" name="method" value="GET" checked>
+        <label for="method">GET</label>
+        <br>
+        <input type="radio" id="POST" name="method" value="POST">
+        <label for="method">POST</label>
+        <br>
+        <input type="radio" id="PUT" name="method" value="PUT">
+        <label for="method">PUT</label>
+        <br>
+        <input type="radio" id="DELETE" name="method" value="DELETE">
+        <label for="method">DELETE</label>
+    </div>
+    <br>
+    <label for="API_KEY">API KEY:</label>
+    <input type="text" id="API_KEY" name="API_KEY"><br>
+    <label for="Base_URL">Base URL:</label>
+    <input type="text" id="Base_URL" name="Base_URL"><br><br>
+    <div>
+        <b>Request Type</b><br>
+        <input type="radio" id="orders" name="requestType" value="orders" checked>
+        <label for="requestType">orders</label>
+        <br>
+        <input type="radio" id="products" name="requestType" value="products">
+        <label for="requestType">products</label>
+        <br>
+    </div>
+    <br>
+    <br>
+    <button id="run">Run</button>
+    <br>
+    <br>
+    <div id="output">
+        output data
+    </div>
+    <script src="api.js" async defer></script>
+</body>
+
+</html>
