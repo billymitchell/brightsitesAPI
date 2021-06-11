@@ -27,7 +27,7 @@ const runAPI = () => {
 
     fetch(`${BASE_URL}api/v2.0.0/${requestTypeValue}?token=${API_KEY}`, {
         method: methodValue,
-        mode: 'no-cors',
+        mode: 'cors',
         redirect: 'follow',
         // headers : { 
         //     'Content-Type': 'application/json',
@@ -38,15 +38,18 @@ const runAPI = () => {
     .then(response => {
         console.log(response)
     })
-    .then(response =>{
-        outPut = data
-    })
-    // .then(data => console.log(data))
-    // .then(result => console.log(result))
-    // .catch(error => console.log('error', error));
+    // .then(response =>{
+    //     outPut = data
+    // })
+    .then(response => response.text())
+    .then(result => console.log(result))
+    .catch(error => console.log('error', error))
 }
 
 runButton.addEventListener("click", runAPI)
 
   
 
+.then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
