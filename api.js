@@ -29,27 +29,26 @@ const runAPI = () => {
         method: methodValue,
         mode: 'cors',
         redirect: 'follow',
-        // headers : { 
-        //     'Content-Type': 'application/json',
-        //     'Accept': 'application/json'
-        //    }
-        // body: JSON.stringify(data)
+        headers : { 
+            'Content-Type': 'application/json',
+            // 'Accept': 'application/json'
+           },
+        // body: JSON.stringify(data),
     })
     .then(response => {
         console.log(response)
+        return response.json()
     })
-    // .then(response =>{
-    //     outPut = data
-    // })
-    .then(response => response.text())
-    .then(result => console.log(result))
-    .catch(error => console.log('error', error))
+    .then(result => {
+        console.log(result)
+    })
+    .then(data =>{
+        console.log(data)
+    })
+    .catch(error => {
+        console.log('error', error)
+    })
 }
 
 runButton.addEventListener("click", runAPI)
 
-  
-
-.then(response => response.text())
-  .then(result => console.log(result))
-  .catch(error => console.log('error', error));
